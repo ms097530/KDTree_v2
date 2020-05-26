@@ -17,40 +17,34 @@ int main()
 	
 	myTree.print();
 	cout << endl;
-	//myTree.print();
+	
 	myTree.regionQuery(50.00, { 1.5, 2.0, 7.9 });
 	cout << endl;
 
-	/*myTree.remove("St. Orleans");
-	myTree.print();
-	cout << endl;*/
-	/*myTree.remove({ 70.2,2.1,8.3 });
-	myTree.print();
-	cout << endl;*/
-	/*myTree.remove("Seattle");
-	myTree.print();
-	cout << endl;*/
+	
 	
 	myTree.remove("Detroit");
 	myTree.print();
 	cout << endl;
 	myTree.regionQuery(50.00, { 1.5, 2.0, 7.9 });
 
-	//vector<double> temp = { 1.0300, 2.5000, 10.1100 };
-	//myTree.remove(temp);
-	//myTree.print();
-	/*Node<string>* searchTest = myTree.search({1.5, 2.0, 7.9});	//works
 	
-	cout << searchTest->getVal() << endl;
-	for (auto elem : searchTest->getDiscrims())
-		cout << elem << " ";
-	cout << endl;
-
+	Node<string>* searchTest = myTree.search({1.5, 2.0, 7.9});	//works
+	if (searchTest != nullptr)
+	{
+		cout << searchTest->getVal() << endl;
+		for (auto elem : searchTest->getDiscrims())
+			cout << elem << " ";
+		cout << endl;
+	}
 	searchTest = myTree.search("St. Orleans");			//works
 
-	cout << searchTest->getVal() << endl;
-	for (auto elem : searchTest->getDiscrims())
-		cout << elem << " ";
-	cout << endl;*/
+	if (searchTest != nullptr)
+	{
+		cout << searchTest->getVal() << endl;
+		for (auto elem : searchTest->getDiscrims())
+			cout << elem << " ";
+		cout << endl;
+	}
 	return 0;
 }
